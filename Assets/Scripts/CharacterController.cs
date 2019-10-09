@@ -70,7 +70,9 @@ public class CharacterController : MonoBehaviour
 			if ( Input.GetMouseButton( 1 ) /* right mouse */)
 			{
 				Vector3 offset = mousePosition - startMousePosition;
+				Debug.Log(offset);
 				transform.localEulerAngles = startEulerAngles + new Vector3( 0, offset.x * 360.0f / Screen.width, 0.0f );//startEulerAngles +Vector3( -offset.y * 360.0f / Screen.height, offset.x * 360.0f / Screen.width, 0.0f );
+				// this.transform.forward = startEulerAngles +  new Vector3( 0, offset.x, 0.0f );
 			}
 		}
 
